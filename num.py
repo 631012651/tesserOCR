@@ -24,7 +24,7 @@ def main(image_path):
         print("图片不存在。")
     else:
         # 识别
-        lang = languages.NA
+        lang = languages.ENG
         text = img_to_str(image_path, lang)
         print("内容:", text, type(text))
         # 保存
@@ -32,7 +32,7 @@ def main(image_path):
 
 if __name__=='__main__':
     print('当前路径是：', os.getcwd())
-    image_path = '../OCR/bchuan.test.exp0.jpg'
+    image_path = 'bcaptcha.jpg'
     main(image_path)
     print("识别完成。")
 

@@ -89,5 +89,6 @@ def main(image_path):
 if __name__=='__main__':
     print('当前路径是：', os.getcwd())
     image_path = '../OCR/bchuan.test.exp0.jpg'
+    #image_path = 'captcha.jpg'
     main(image_path)
     print("识别完成。")
