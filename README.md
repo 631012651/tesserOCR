@@ -1,33 +1,34 @@
 "# tesserOCR" 
-³µÅÆÊ¶±ğ
---OCRÊµÕ½
-Ò»¡¢	»·¾³×¼±¸
+                                                                            è½¦ç‰Œè¯†åˆ«
+                                                                            
+                                                                                          --OCRå®æˆ˜
+ä¸€ã€	ç¯å¢ƒå‡†å¤‡
 Pytesseract
 Tesserocr
-ÓïÑÔ°ü°²×°sudo apt install tesseract-ocr-*
+è¯­è¨€åŒ…å®‰è£…sudo apt install tesseract-ocr-*
 Tesseract
 Pillow
 Opencv
 https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/opencv-python/
 
-¶ş¡¢³µÅÆÊ¶±ğ
-ĞèÒª import pytesseract, tesserocr ,image
-°××ÖÀ¶µ×µÄ³µÅÆĞèÒª×ª»»³ÉºÚ×Ö°×µ×µÄÍ¼Æ¬£¬ĞèÒª×ª»»Á½´Î£»ÏÈ×ª»ÒÉ«£¬ºóºÚ°×
-image_gray = image_raw.convert('L')   # ½«Í¼Æ¬±ä³É»ÒÉ«
+äºŒã€è½¦ç‰Œè¯†åˆ«
+éœ€è¦ import pytesseract, tesserocr ,image
+ç™½å­—è“åº•çš„è½¦ç‰Œéœ€è¦è½¬æ¢æˆé»‘å­—ç™½åº•çš„å›¾ç‰‡ï¼Œéœ€è¦è½¬æ¢ä¸¤æ¬¡ï¼›å…ˆè½¬ç°è‰²ï¼Œåé»‘ç™½
+image_gray = image_raw.convert('L')   # å°†å›¾ç‰‡å˜æˆç°è‰²
 
-image_black_white = image_gray.point(lambda x: 0 if x > 200 else 255)  #×ª»»³ÉºÚ°×Í¼Æ¬
+image_black_white = image_gray.point(lambda x: 0 if x > 200 else 255)  #è½¬æ¢æˆé»‘ç™½å›¾ç‰‡
 
  
 
  
  
 pytesseract.image_to_string
-´òÓ¡³ö³µÅÆºÅ
+æ‰“å°å‡ºè½¦ç‰Œå·
 
-FAQ£º
-1¡¢RuntimeError: Failed to init API, possibly an invalid tessdata path:
-½â¾ö°ì·¨£º
-²âÊÔÒ»ÏÂCMD
+FAQï¼š
+1ã€RuntimeError: Failed to init API, possibly an invalid tessdata path:
+è§£å†³åŠæ³•ï¼š
+æµ‹è¯•ä¸€ä¸‹CMD
 tesseract --list-langs
-TESSDATA_PREFIXĞèÒªÅäÖÃÍêÕûÂ·¾¶£º C:\Program Files\Tesseract-OCR\tessdata
-2¡¢³µÅÆÊ¶±ğ´íÎó£¬ÇëÓÃjTessBoxEditor½øĞĞÑµÁ·£¬°ÑÑµÁ·ºÃµÄÓïÑÔ¿â·Åµ½tessdata
+TESSDATA_PREFIXéœ€è¦é…ç½®å®Œæ•´è·¯å¾„ï¼š C:\Program Files\Tesseract-OCR\tessdata
+2ã€è½¦ç‰Œè¯†åˆ«é”™è¯¯ï¼Œè¯·ç”¨jTessBoxEditorè¿›è¡Œè®­ç»ƒï¼ŒæŠŠè®­ç»ƒå¥½çš„è¯­è¨€åº“æ”¾åˆ°tessdata
